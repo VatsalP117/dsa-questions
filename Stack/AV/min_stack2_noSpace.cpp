@@ -1,0 +1,1 @@
+//main problem: minimum agar pop ho gya to previous minimim kon tha ye kaise pata kare

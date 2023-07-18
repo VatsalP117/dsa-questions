@@ -1,0 +1,19 @@
+i=0 (start)
+j=0 (end)
+size of window is given as k
+
+loop:
+while(j<n){
+    calculations karo pehle
+
+    if window size not reached yet then first focus on that:
+        if(j-i+1<k) j++
+    
+    else if (j-i+1==k){
+        //i.e size reaches
+        find some ans using our calculations
+        remove i from calculations
+        window size maintain and slide (i++ j++)
+    }
+
+}
