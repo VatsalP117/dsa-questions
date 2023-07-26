@@ -1,0 +1,22 @@
+Identification
+1) k
+2) smallest/largest/top/closest
+agar ye dono chize hai question mai fir to heap ka hi hai 
+
+Which heap?
+k+smallest -> max heap (ya fir closest,lowest bhi smallest ka hi feel dete h)
+k+largest-> min heap (ya fir top,greatest etc jo bhi largest hi feel de)
+(ulta relation hai)
+
+Heap ke saare solution sorting ke hi question jote hai
+Sorting TC=nlogn
+Heap solution = nlogk (k=size of heap)
+
+Methods: top,push,pop
+
+C++ STL 
+max heap: priority_queue<int> name
+min heap: priority_queue<int,vector<int>,greater<int>> name 
+
+How to define types for convenience?
+type def pair<int,pair<int,int>> ppi; (ppi is type name we can use instead of ye pair pair wala pura chiz)
