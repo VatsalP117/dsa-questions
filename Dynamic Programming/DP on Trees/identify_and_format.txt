@@ -1,0 +1,39 @@
+Identification:-
+jaisa kuch kaam diya hai ki har ek node pe jaake O(n) ka kuch kaam kar rahe ho (jaise diameter of tree nikalne har ek node ki height chaiye)
+aise mai tc ho jayegi O(n2) aur ye jo har node ke liye repetitive work hua usko bachane dp
+
+General Recursion: (Bird View)
+f(i/p){
+    1. Base condition
+
+    2. Hypothesis :- ye jo dega isko question mat karna just accept it. agar code sahi likha h to sahi ans hi aayega jaise bhi ho
+    for eg: say it returns height og left and right subtree to kaise aaya vo lite bas aa gya aur usse current node ki height nikalne pe dhyaan do 
+
+    3.Induction :-
+    using values from Hypothesis to induce an ans for our curr_node 
+    
+}
+
+General Format:
+int solve(Node* root,int &res){
+    //datatype can be anything
+    //res ko pass by reference aur isme apna final ans store hoga 
+
+    //Base
+    if(root==NULL) return 0
+    //can have more base conditions as well 
+
+    //Hypothesis
+    int l=solve(root->left)
+    int h=solve(root->right)
+
+    //Induction
+    int temp= calculate temp ans 
+
+    //ab ye check karega mai khud bhi ans ban sakta hu kya (jaise diameter mai can it become the node through which longest path passes/curves)
+    int ans=max(temp,kuch to relation)
+        res=max(ans,res)
+    
+    return temp;
+    //jab isko ans nahi banna to ye temp value aage deni bhi padegi na
+}

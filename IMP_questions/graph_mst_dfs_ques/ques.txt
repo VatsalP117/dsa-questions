@@ -1,0 +1,57 @@
+To make sure that their juniors, cats & dogs doesn't get to face the problem which they have faced, (getting drenched in rain when they want to move from any building to any other building on our campus due to lack of shed connection between few buildings. CH1&CH7 being classic examples.), The BE batch of 24 (after the previous meet) have now come forward for the 2nd round of meeting with CSA to move towards a solution to this problem. The CSA president has requested them to come up with the following info this time,
+
+Q1. Count of minimum Rain-proof bridges to solve this problem,
+
+Q2. Minimum possible Total budget needed for construction,
+
+Q3. The bridges info in a special sort sequence.
+
+Given a random network of our campus buildings and the existing rain-proof bridges connectivity between them, go ahead and compute the info requested by our prez!
+
+Note:
+
+1.Here, the cost of construction of a new bridge is equal to the sum of its terminal building Numbers. Ex. construction of bridge between building number 5 & 8 is 13.
+
+2.Here, special sort means lexicographically Non-Increasing sequence(both row wise & coloumn wise).
+
+For example, if you want to print the following bridge info in special sort sequence,
+
+3 4
+
+7 8
+
+8 6
+
+2 3
+
+The result would be,
+
+8 7
+
+8 6
+
+4 3
+
+3 2
+
+Input Format
+
+The first input line has two integers n and m denoting the number of buildings and rain-proof bridges. The buildings are numbered 1,2,…,n.
+
+The subsequent m lines describe the existing rain-proof bridges. Each line has two integers a and b denoting that there is a rain-proof bridge between those buildings.
+
+A bridge always connects two different buildings, and there is at most one bridge between any two buildings.
+
+Constraints
+
+1 <= n <= 1,00,000
+
+1 <= m <= 2,00,000
+
+1 <= a,b <= n
+
+Output Format
+
+The first line contains 2 space seperated integers y, z denoting answers to Q1 & Q2 respectively.
+
+The subsequent y lines contains new bridges(to be constructed) info in a 'special sort' sequence.
