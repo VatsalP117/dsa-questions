@@ -1,0 +1,41 @@
+Basic Operators:
+1. & (bitwise and): ye internally har ek bit ka and karke output to decimal value hi dega 
+2. | (bitwise or)
+3. ^ (bitwise xor)
+4. ~ (bitwise not): unary operator, will flip all bits
+
+(ASSUMPTION: integers are represented in 32 bits)
+Shift Operators:
+1. Left shift (<<)
+eg x<<1 mai x is the number to be left shifted. 1 is the number of times to be left shifted. right mai jitni places khaali
+hogi usme 0 daal denge and we return the decimal value afterwards (3>>1 will give 6)
+Therefore, left shift karke value badhegi in most cases
+
+OBSERVATION: 
+x<<y (i.e x left shited by y bits) = x * (2^y)= x* pow(2,y)
+assuming first y leading (msb) bits =0 in x
+
+
+2. Right Shift (>>)
+right shitfed by specified number of bits and beginning mai zero daal denge 
+
+OBSERVATION:
+x>>y = floor(x/(2^y))
+    =floor (x/pow(2,y))
+    (reverse of left shift)
+
+Unsigned Integers:
+unsigned int x=1; 
+unsigned means only numbers >=0 allowed . thereofe, max value =pow(2,32) -1 
+
+Signed Integers:
+range= -2^31 to 2^31-1 
+Use the leading bit (MSB) as sign bit
+1st bit=0 means positive number 
+1st bit=1 means negative number
+baaki 31 bits batayegi number hai kya
+
+Positive number: 1st bit =0 and rest 31 bit give the number as it is
+Negative number: 1st bit=1 and 2's complement of remaining 31 bits give magnitude of the number 
+
+2's complement of x in n-bits representation = (2^n) -x 
