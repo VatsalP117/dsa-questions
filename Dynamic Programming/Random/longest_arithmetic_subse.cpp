@@ -99,3 +99,26 @@ int solve(int ind,int diff,int arr[],vector<vector<int>> &dp){
         return ans;
         
     }
+
+    //unordered_map
+    int longestArithSeqLength(vector<int>& nums) {
+        int n=nums.size();
+        if(n<=2) return n;
+        int res=0;
+        vector<unordered_map<int,int>> dp(n);
+        //basically for every index, difference and lenght of ap store karne
+        for(int i=1;i<n;i++){
+            
+            for(int j=0;j<i;j++){
+                int count=1;//vo element khud i.e nums[i]
+                int diff=nums[i]-nums[j];
+                if(dp[j].find(diff)!=dp[j].end()){
+                    count=dp[j][diff];
+                    //agar j pehle si kisi mai hai vo
+                }
+                dp[i][diff]=count+1; //ab yaha j bhale pehle se kisi mai na ho, sirf akele to aayega (aur agar uska count aa gya to i)
+                res=max(res,dp[i][diff]);
+            }
+        }   
+        return res;
+    }

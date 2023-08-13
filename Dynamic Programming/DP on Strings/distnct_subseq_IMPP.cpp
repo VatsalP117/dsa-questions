@@ -1,6 +1,10 @@
 //memoization
 int f(int i,int j,string &s,string &t,vector<vector<int>> &dp){
+        //optimization (not needed but makes very fast)
+        if(i<j) return 0;
+        //since s mai utne characters hi nahi jitne t mai hai abhi
         //base case
+
         if(j<0) return 1; //matched all characters we wanted
         if(j>=0 && i<0) return 0; //characters still left to match but s1 got exhausted
         if(dp[i][j]!=-1) return dp[i][j];

@@ -1,0 +1,18 @@
+Integers are stored in 32 bits and long long in 64 bits (generally)
+so binary repersentation of 9= 000...1001 (28 zeros before 1001)
+indexing starts from right(LSB) to left(MSB)
+
+XOR
+1^0 = 1
+0^1 = 1
+1^1 = 1
+0^0 = 0
+GENERALLY, even number of 1's ka XOR = 0
+odd number of 1's ka XOR= 1
+
+Check if ith bit is set or not(assuming 1st bit,i=1 means LSB i.e 1based indexing)
+(num>>(i-1)) & 1 !=0 means it is set
+
+How to turn on ith bit?
+eg make the 3rd bit set(assuming 1 based indexing)
+(num | (1<<i-1) )

@@ -1,0 +1,15 @@
+given an array of numbers and a value x, what is the max value of arr[i] ^ x?
+
+Approach:
+1. Insert all numbers into the trie in the form of binary bits 
+Insertion should be de done from right to left (MSB to LSB)
+2. Take x and find max number from array where (number^x) is max
+
+How to maximimize xor?
+say x=8= 01000 (assume only 5 bits)
+
+0 1 0 0 0
+_ _ _ _ _ which is this number for max xor??
+
+for msb (start for left to right), do we have someone with bit=1? (since 0^1 =1)
+then move to next bit, do we have someone with bit=0, then next and next..
